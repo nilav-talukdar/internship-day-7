@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+  </head>
+  <body>
+    <main id="app">
+      <header class="header">
+        <h1 class="header__title">User Directory</h1>
+        <button id="reloadBtn" class="header__reload-btn">Reload Data</button>
+      </header>
+
+      <main class="main">
+        <section id="userContainer" class="users"></section>
+        <div id="errorMessage" class="error-message" aria-live="polite"></div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">Data fetched from JSONPlaceholder API</p>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

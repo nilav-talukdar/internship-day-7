@@ -1,0 +1,105 @@
+:root {
+  --font-main: "Segoe UI", Tahoma, sans-serif;
+  --color-bg: #f8f9fa;
+  --color-card-bg: #fff;
+  --color-primary: #007bff;
+  --color-text: #333;
+  --color-error: #d9534f;
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --radius-card: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-card-bg);
+  box-shadow: var(--shadow-card);
+}
+
+.header__title {
+  font-size: 1.5rem;
+}
+
+.header__reload-btn {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header__reload-btn:hover {
+  background-color: #0056b3;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.users {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.user-card {
+  background-color: var(--color-card-bg);
+  padding: 1rem;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+}
+
+.user-card__name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.user-card__email {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.user-card__address {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.error-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--color-error);
+  color: #fff;
+  border-radius: var(--radius-card);
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
